@@ -2,15 +2,9 @@
 
 A frontend task management application built with React + Vite and Material UI
 
-## Features
+* Deployment Link: https://task-manager-mui-9465.vercel.app/
 
-* User authentication (admin and regular user roles)
-* Task creation, editing, and deletion
-* Task approval workflow
-* Calendar view for task deadlines
-* User profile management
-* Responsive design for all devices
-
+  
 ## Tech Stack
 
 * **Frontend:** React with JavaScript, Material UI and Tailwind CSS
@@ -47,7 +41,7 @@ A frontend task management application built with React + Vite and Material UI
 * Password: `user123`
 
 
-**##Features**
+###Features
 
 **User Roles:**
 * Admin
