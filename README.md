@@ -14,8 +14,6 @@ A frontend task management application built with React + Vite and Material UI
 ## Tech Stack
 
 * **Frontend:** React with JavaScript, Material UI and Tailwind CSS
-* **Backend:** Localstorage + Seed
-* **Authentication:** Simple username/password (demo purposes)
 
 ## Getting Started
 
