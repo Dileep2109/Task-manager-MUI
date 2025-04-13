@@ -1,0 +1,234 @@
+/* Calendar Container */
+.rbc-calendar {
+  width: 100%;
+  height: 600px;
+  font-family: 'Inter', sans-serif;
+  border-radius: 0;
+  border: 1px solid #e0e0e0;
+  background: white;
+}
+
+/* Hide weekday labels in month view */
+.rbc-month-view .rbc-row.rbc-month-header {
+  display: none;
+}
+
+/* Header - Weekdays (still used in other views like week/day) */
+.rbc-header {
+  padding: 12px 0;
+  background: #f8fafc;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  border: none;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+/* Month View Grid */
+.rbc-month-view {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  border: none;
+}
+
+/* Day Cells */
+.rbc-month-row {
+  min-height: 100px;
+}
+.rbc-day-bg {
+  border: 1px solid #e2e8f0;
+  position: relative;
+}
+
+/* Date Header - Aligned Date and Day */
+.rbc-date-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.rbc-day-of-week {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 2px;
+}
+
+.rbc-date-number {
+  font-size: 16px;
+  font-weight: 500;
+  color: #334155;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Today's Date */
+.rbc-today {
+  background-color: #f0f9ff;
+}
+.rbc-today .rbc-date-number {
+  background: #3b82f6;
+  color: white;
+  border-radius: 50%;
+}
+
+/* Events */
+.rbc-event {
+  border-radius: 4px;
+  margin: 1px 3px;
+  padding: 2px 4px;
+  font-size: 11px;
+  background-color: #3b82f6;
+  color: white;
+  border-left: 3px solid #1d4ed8;
+}
+
+/* Event Status Colors */
+.pending-event {
+  background-color: #64748b;
+  border-left-color: #475569;
+}
+.in-progress-event {
+  background-color: #3b82f6;
+  border-left-color: #1d4ed8;
+}
+.submitted-event {
+  background-color: #f59e0b;
+  border-left-color: #d97706;
+  color: #1e293b;
+}
+.approved-event {
+  background-color: #10b981;
+  border-left-color: #059669;
+}
+.rejected-event {
+  background-color: #ef4444;
+  border-left-color: #dc2626;
+}
+
+/* Toolbar */
+.rbc-toolbar {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  background: white;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rbc-toolbar button {
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  color: #334155;
+  padding: 6px 12px;
+  margin: 0 2px;
+}
+
+.rbc-toolbar button.rbc-active {
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+/* Dark Mode */
+[data-theme='dark'] .rbc-calendar {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+[data-theme='dark'] .rbc-month-view {
+  background: #1e293b;
+}
+
+[data-theme='dark'] .rbc-header {
+  background: #0f172a;
+  color: #94a3b8;
+  border-color: #334155;
+}
+
+[data-theme='dark'] .rbc-day-bg {
+  border-color: #334155;
+}
+
+[data-theme='dark'] .rbc-day-of-week {
+  color: #94a3b8;
+}
+
+[data-theme='dark'] .rbc-date-number {
+  color: #e2e8f0;
+}
+
+[data-theme='dark'] .rbc-today {
+  background: #1e3a8a;
+}
+[data-theme='dark'] .rbc-today .rbc-date-number {
+  background: #1e40af;
+  color: white;
+}
+
+[data-theme='dark'] .rbc-toolbar {
+  background: #0f172a;
+  border-color: #334155;
+}
+
+[data-theme='dark'] .rbc-toolbar button {
+  background: #1e293b;
+  color: #e2e8f0;
+  border-color: #334155;
+}
+
+[data-theme='dark'] .rbc-toolbar button.rbc-active {
+  background: #3b82f6;
+  color: white;
+}
+/* General event cell style */
+.rbc-event {
+  padding: 4px 8px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 4px;
+  color: white;
+}
+
+/* Status-based colors */
+.pending-event {
+  background-color: gray;
+}
+.in-progress-event {
+  background-color: orange;
+}
+.submitted-event {
+  background-color: blue;
+}
+.approved-event {
+  background-color: green;
+}
+.rejected-event {
+  background-color: red;
+}
+
+/* Allow events to flow nicely in month view */
+.rbc-month-view .rbc-event {
+  position: relative;
+  display: block;
+  margin: 2px 0;
+  max-width: 100%;
+}
+
+/* Prevent overflowing at bottom */
+.rbc-day-slot .rbc-event-content {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

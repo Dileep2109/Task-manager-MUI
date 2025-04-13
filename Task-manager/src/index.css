@@ -1,0 +1,89 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Material UI handle most styling */
+body {
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Basic utility classes that don't conflict with Material UI */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.transition-colors {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Additional styling for calendar */
+.rbc-calendar {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark .rbc-calendar,
+.dark .rbc-month-view,
+.dark .rbc-agenda-view,
+.dark .rbc-time-view,
+.dark .rbc-agenda-table {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border-color: #444;
+}
+
+.dark .rbc-header,
+.dark .rbc-agenda-date-cell,
+.dark .rbc-agenda-time-cell,
+.dark .rbc-time-header {
+  background-color: #333;
+  color: #fff;
+  border-color: #444;
+}
+
+.dark .rbc-off-range-bg {
+  background-color: #2a2a2a;
+}
+
+.dark .rbc-today {
+  background-color: rgba(155, 135, 245, 0.2);
+}
+
+.dark .rbc-event {
+  background-color: #9b87f5;
+}
+
+.dark .rbc-day-bg + .rbc-day-bg,
+.dark .rbc-month-row + .rbc-month-row,
+.dark .rbc-header + .rbc-header {
+  border-color: #444;
+}
+
+/* These utility dark mode classes help with transition until Material UI takes */
+.dark .MuiPaper-root,
+.dark .MuiCard-root {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.dark .MuiTypography-root {
+  color: #ffffff;
+}
+
+.dark .MuiSvgIcon-root {
+  color: #b0b0b0;
+}
+
+.dark .MuiAppBar-root {
+  background-color: #121212;
+}
+
+.dark .MuiDrawer-paper {
+  background-color: #121212;
+}
