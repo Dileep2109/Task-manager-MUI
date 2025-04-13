@@ -41,7 +41,7 @@ A frontend task management application built with React + Vite and Material UI
 * Password: `user123`
 
 
-###Features
+**Features**
 
 **User Roles:**
 * Admin
